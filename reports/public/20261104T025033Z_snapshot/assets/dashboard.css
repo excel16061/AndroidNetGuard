@@ -1,0 +1,29 @@
+
+body{font:14px/1.45 -apple-system,system-ui,sans-serif;margin:0;color:#1d1d1f;background:#fafafa}
+header{background:#1d2b3a;color:#fff;padding:12px 24px}header a{color:#cfe3ff}
+main{padding:16px 24px;max-width:1300px}
+h1{font-size:20px;margin:0}h2{font-size:17px;margin:24px 0 8px}h3{font-size:15px;margin:16px 0 6px}
+table{border-collapse:collapse;width:100%;background:#fff;margin:6px 0}
+th,td{border:1px solid #ddd;padding:4px 6px;text-align:left;vertical-align:top}th{background:#f0f2f5}
+code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-weight:600;font-size:12px}
+.s-pending{background:#e8e8e8}.s-running{background:#d6e8ff}.s-passed{background:#cdeccd}
+.s-failed{background:#f8cfcf}.s-inconclusive{background:#fbe9b7}.s-execution_error{background:#e5d0f5}
+.ni{color:#777;font-style:italic}.note{background:#fff8e1;border-left:4px solid #e0b000;padding:8px 12px}
+.ok{color:#176b17}.bad{color:#a11}.muted{color:#777}
+button{font-size:14px;padding:6px 14px}
+.scrollx{overflow-x:auto}
+
+.viz-root{--surface-1:#fcfcfb;--text-primary:#0b0b0b;--text-secondary:#52514e;--muted:#898781;
+ --grid:#e1e0d9;--axis:#c3c2b7;--series-1:#2a78d6;--good:#0ca30c;--critical:#d03b3b;--warning:#fab219;}
+/* Light only: the surrounding dashboard has no dark theme, so charts must not switch alone. */
+.viz-root{color-scheme:light}
+.viz-root{background:var(--surface-1);color:var(--text-primary);padding:8px;border-radius:6px;margin:8px 0}
+.viz-root svg text{fill:var(--text-secondary);font:11px -apple-system,system-ui,sans-serif}
+.viz-root .t{fill:var(--text-primary);font-weight:600;font-size:12px}
+.viz-root .tiles{display:flex;gap:12px;flex-wrap:wrap}
+.viz-root .tile{border:1px solid var(--grid);border-radius:6px;padding:6px 10px;min-width:120px}
+.viz-root .tile b{display:block;font-size:20px;color:var(--text-primary)}
+.viz-root .empty{color:var(--muted);font-style:italic;padding:12px}
+
+.snapshot-banner{border-left-color:#6250d6;background:#f1effc}

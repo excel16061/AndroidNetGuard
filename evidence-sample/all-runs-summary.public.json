@@ -1,0 +1,173 @@
+{
+  "analysis_version": "7",
+  "runs": [
+    {
+      "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+      "test_id": "wifi_connectivity",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "880188e0-91db-4a92-83e3-abfdd66b1faa",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "e8822050-8394-4e56-91e6-46caed073652",
+      "test_id": "app_restart",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "5a42a6a2-f5cb-4464-b9c2-8b493ad47f19",
+      "test_id": "usb_connectivity",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "a68ba1ae-2114-4f20-b2b8-937c169ca361",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "f00ad06f-d23b-43c0-acd9-9463c2fe495e",
+      "test_id": "wifi_reconnect",
+      "final_status": "inconclusive",
+      "app_status_provisional": "inconclusive"
+    },
+    {
+      "run_id": "4b15bc09-3c7e-4e9d-b037-54877dcfcbe3",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "56937e1f-f494-4e9d-9ca2-3d32a7eac7fe",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "13e0ef41-a246-4050-bbd2-9676e714beff",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "28a3abf7-5e26-4db0-a80d-a04057944c50",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "60de5d0a-fc38-4413-9fe7-83f14921210f",
+      "test_id": "app_restart",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "b3f0083e-c5ab-46e2-9f31-5bf5e38dcb04",
+      "test_id": "usb_connectivity",
+      "final_status": "inconclusive",
+      "app_status_provisional": "failed"
+    },
+    {
+      "run_id": "89005626-772e-4b54-9a36-53571b15a85c",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "fa3014fa-d33a-4a35-bbb3-57c28471a04d",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "f8258b4b-ceb6-439d-94b8-7766b6d537a1",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "09ebef02-804e-4054-a99d-b84edea13b29",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "3b408934-58b5-472d-9a0c-79e510297796",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "4b0932c0-059c-47ce-9256-a6f58b7ef0e0",
+      "test_id": "wifi_sequence",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "37b7922a-d7cc-411b-ab71-c383e31a35e6",
+      "test_id": "usb_connectivity",
+      "final_status": "inconclusive",
+      "app_status_provisional": "failed"
+    },
+    {
+      "run_id": "bc3dfc2f-0bd2-4d85-a656-7d9672d942c0",
+      "test_id": "app_restart",
+      "final_status": "inconclusive",
+      "app_status_provisional": "inconclusive"
+    },
+    {
+      "run_id": "bef3792c-5868-4c9c-9881-35da2c43254f",
+      "test_id": "wifi_observation",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "dece843d-295c-41e0-b23d-629839273436",
+      "test_id": "app_restart",
+      "final_status": "inconclusive",
+      "app_status_provisional": "inconclusive"
+    },
+    {
+      "run_id": "22516f79-dcd1-4994-9918-f2e3a4c9a717",
+      "test_id": "wifi_observation",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "29016b2c-dad9-4db4-a796-1ae4e2768263",
+      "test_id": "wifi_observation",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "14e3657e-dbfb-4286-8e37-49fdcb7b8e3b",
+      "test_id": "wifi_observation",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "cde75240-ae69-4223-9aa9-f26b4bef4da3",
+      "test_id": "wifi_observation",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "4332f30e-ac6f-40c5-8de3-037bf899f7bc",
+      "test_id": "wifi_reconnect",
+      "final_status": "passed",
+      "app_status_provisional": "passed"
+    },
+    {
+      "run_id": "50edfe31-5158-4e03-b2f4-de8fefd73e32",
+      "test_id": "wifi_observation",
+      "final_status": "inconclusive",
+      "app_status_provisional": "inconclusive"
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "schema": "ang.export/1",
+  "scope": "public",
+  "generated_at": "20261104T031444Z",
+  "analysis_version": "7",
+  "note": "derived is recomputed from raw; raw is copied verbatim except redacted device identifiers and local addresses",
+  "derived": {
+    "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+    "test_id": "wifi_connectivity",
+    "test_kind": "connectivity",
+    "configured_mode": "wifi",
+    "endpoint": "[redacted]",
+    "params": {},
+    "started_wall_time_phone": "2026-11-03T18:53:34.786551Z",
+    "duration_ms_phone_monotonic": 510,
+    "app_status_provisional": "passed",
+    "final_status": "passed",
+    "status_kind": "connectivity",
+    "status_meaning": "Every required step completed and all required evidence is present and consistent: the app received an acknowledgement carrying the same request ID AND the collector holds exactly one stored record for that ID with matching run and step IDs, under the test's preconditions (e.g. observed transport exactly 'wifi').",
+    "reasons": [
+      "passed: step 2 message #1: ack with same ID and one matching collector record"
+    ],
+    "checks": [
+      {
+        "check": "app run_finished present",
+        "ok": true,
+        "detail": "app-side status passed: message: ack (HTTP 200), 50 ms"
+      },
+      {
+        "check": "collector records exist for this run",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "no non-wifi transport change during run",
+        "ok": true,
+        "detail": ""
+      }
+    ],
+    "issues": [],
+    "analysis_version": "7",
+    "process_ids": [
+      "9bd0042a-23d6-473c-8d6b-7d2d09add145"
+    ],
+    "cancellation": {
+      "requested": false,
+      "requested_ms": null,
+      "completed": false,
+      "completed_ms": null,
+      "completed_before_requested": false,
+      "finished_before_tap": [],
+      "in_flight": [],
+      "started_after_request": [],
+      "stop_latency_ms": null,
+      "validation": "not_exercised",
+      "validation_reason": "no Cancel tap recorded"
+    },
+    "ui_recreations": [],
+    "wireless": null,
+    "steps": [
+      {
+        "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+        "index": 1,
+        "kind": "health",
+        "description": "Collector health check",
+        "app_status": "passed",
+        "app_reason": "health_ok (HTTP 200), 422 ms",
+        "informational": false,
+        "attempts": [
+          {
+            "request_id": "859fe13b-08b0-47c7-877b-6b8e8a372bef",
+            "kind": "health",
+            "seq": null,
+            "outcome": "health_ok",
+            "acked_same_id": false,
+            "elapsed_ms": 422,
+            "observed_transport_before": "wifi",
+            "observed_transport_after": "wifi",
+            "error": null,
+            "server_record_count": 0,
+            "correlation": "health_app_only",
+            "server_remote_addr": "[redacted]",
+            "server_addr": "[redacted]"
+          }
+        ]
+      },
+      {
+        "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+        "index": 2,
+        "kind": "message",
+        "description": "Send one test message",
+        "app_status": "passed",
+        "app_reason": "ack (HTTP 200), 50 ms",
+        "informational": false,
+        "attempts": [
+          {
+            "request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+            "kind": "message",
+            "seq": 1,
+            "outcome": "ack",
+            "acked_same_id": true,
+            "elapsed_ms": 50,
+            "observed_transport_before": "wifi",
+            "observed_transport_after": "wifi",
+            "error": null,
+            "server_record_count": 1,
+            "correlation": "matched",
+            "server_remote_addr": "[redacted]",
+            "server_addr": "[redacted]"
+          }
+        ]
+      }
+    ]
+  },
+  "raw": {
+    "app_events": [
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "b022aa7b-7e14-44ca-9972-b9abdcc28826",
+        "event": "run_started",
+        "wall_time": "2026-11-03T18:53:34.786551Z",
+        "mono_ns": 71961728612555,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "test_mode": "wifi",
+        "endpoint": "[redacted]",
+        "params": {},
+        "run_limit_ms": 30000,
+        "observed_transport": "wifi",
+        "trigger": "adb_intent"
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "cfe14bed-26d1-4707-aea1-2523e0a59e07",
+        "event": "step_started",
+        "wall_time": "2026-11-03T18:53:34.794772Z",
+        "mono_ns": 71961736827248,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+        "step_index": 1,
+        "step_kind": "health",
+        "description": "Collector health check",
+        "timeout_ms": 10000
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "78846583-370c-45cc-bb16-26157dcdb4be",
+        "event": "attempt_started",
+        "wall_time": "2026-11-03T18:53:34.798126Z",
+        "mono_ns": 71961740225709,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+        "request_id": "859fe13b-08b0-47c7-877b-6b8e8a372bef",
+        "kind": "health",
+        "url": "[redacted]",
+        "observed_transport": "wifi"
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "b9876a05-2199-40f4-8625-c008b1ccbb94",
+        "event": "attempt_finished",
+        "wall_time": "2026-11-03T18:53:35.223672Z",
+        "mono_ns": 71962165746709,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+        "request_id": "859fe13b-08b0-47c7-877b-6b8e8a372bef",
+        "outcome": "health_ok",
+        "http_status": 200,
+        "ack_request_id": null,
+        "server_time": "2026-11-03T18:53:35.223Z",
+        "server_session_id": "b7b04955-a992-4853-ab56-5232230587a7",
+        "error": null,
+        "elapsed_ms": 422,
+        "start_mono_ns": 71961743050709,
+        "observed_transport_after": "wifi"
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "3d629857-5863-4da1-b1a6-ae6729060b3c",
+        "event": "step_finished",
+        "wall_time": "2026-11-03T18:53:35.229239Z",
+        "mono_ns": 71962171299940,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+        "status": "passed",
+        "reason": "health_ok (HTTP 200), 422 ms",
+        "informational": false
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "9c1346cd-98c7-43dd-b9cc-d6c2161a0dae",
+        "event": "step_started",
+        "wall_time": "2026-11-03T18:53:35.232099Z",
+        "mono_ns": 71962174159863,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+        "step_index": 2,
+        "step_kind": "message",
+        "description": "Send one test message",
+        "timeout_ms": 10000
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "d7812734-26be-453b-86f0-51bd39835394",
+        "event": "attempt_started",
+        "wall_time": "2026-11-03T18:53:35.234987Z",
+        "mono_ns": 71962177011863,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+        "request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+        "kind": "message",
+        "seq": 1,
+        "url": "[redacted]",
+        "observed_transport": "wifi",
+        "body_bytes": 393
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "f483a91d-5831-4460-9c44-684395f487dd",
+        "event": "attempt_finished",
+        "wall_time": "2026-11-03T18:53:35.288558Z",
+        "mono_ns": 71962230623863,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+        "request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+        "outcome": "ack",
+        "http_status": 200,
+        "ack_request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+        "server_time": "2026-11-03T18:53:35.290Z",
+        "server_session_id": null,
+        "error": null,
+        "elapsed_ms": 50,
+        "start_mono_ns": 71962180274940,
+        "observed_transport_after": "wifi"
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "47fe1947-3c20-44f8-908e-bb6f9492f892",
+        "event": "step_finished",
+        "wall_time": "2026-11-03T18:53:35.293402Z",
+        "mono_ns": 71962235443940,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+        "status": "passed",
+        "reason": "ack (HTTP 200), 50 ms",
+        "informational": false
+      },
+      {
+        "schema": "ang.app.event/1",
+        "event_id": "6dbe7b8c-ba35-4e65-9765-d3977ab5b674",
+        "event": "run_finished",
+        "wall_time": "2026-11-03T18:53:35.295870Z",
+        "mono_ns": 71962237995248,
+        "process_id": "9bd0042a-23d6-473c-8d6b-7d2d09add145",
+        "app_version": "0.2.0",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "test_id": "wifi_connectivity",
+        "status": "passed",
+        "status_scope": "app_provisional",
+        "reason": "message: ack (HTTP 200), 50 ms",
+        "duration_ms": 510
+      }
+    ],
+    "server_records": [
+      {
+        "server_time": "2026-11-03T18:53:35.290Z",
+        "server_mono_ns": 110117301112166,
+        "remote_addr": "[redacted]",
+        "remote_port": "[redacted]",
+        "server_addr": "[redacted]",
+        "server_port": "[redacted]",
+        "session_id": "b7b04955-a992-4853-ab56-5232230587a7",
+        "request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+        "message": "AndroidNetGuard connectivity check (harmless test data)",
+        "app_version": "0.2.0",
+        "client_time": "2026-11-03T18:53:35.234677Z",
+        "run_id": "cf710e48-9342-47c4-aa44-f67d16d811e5",
+        "seq": 1,
+        "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+        "test_id": "wifi_connectivity",
+        "test_label": "wifi_connectivity",
+        "test_mode": "wifi",
+        "transport": "wifi",
+        "_session_dir": "[redacted]"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 0.0,
+      "event": "run_started",
+      "step_id": null,
+      "request_id": null,
+      "detail": "",
+      "wall_time": "2026-11-03T18:53:34.786551Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 8.2,
+      "event": "step_started",
+      "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+      "request_id": null,
+      "detail": "#1 health: Collector health check",
+      "wall_time": "2026-11-03T18:53:34.794772Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 11.6,
+      "event": "attempt_started",
+      "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+      "request_id": "859fe13b-08b0-47c7-877b-6b8e8a372bef",
+      "detail": "health seq=None transport=wifi",
+      "wall_time": "2026-11-03T18:53:34.798126Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 437.1,
+      "event": "attempt_finished",
+      "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+      "request_id": "859fe13b-08b0-47c7-877b-6b8e8a372bef",
+      "detail": "health_ok http=200 422 ms after=wifi",
+      "wall_time": "2026-11-03T18:53:35.223672Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 442.7,
+      "event": "step_finished",
+      "step_id": "7e82d77d-0663-4fcb-ab15-dd5414d53ab7",
+      "request_id": null,
+      "detail": "passed: health_ok (HTTP 200), 422 ms",
+      "wall_time": "2026-11-03T18:53:35.229239Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 445.5,
+      "event": "step_started",
+      "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+      "request_id": null,
+      "detail": "#2 message: Send one test message",
+      "wall_time": "2026-11-03T18:53:35.232099Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 448.4,
+      "event": "attempt_started",
+      "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+      "request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+      "detail": "message seq=1 transport=wifi",
+      "wall_time": "2026-11-03T18:53:35.234987Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 502.0,
+      "event": "attempt_finished",
+      "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+      "request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+      "detail": "ack http=200 50 ms after=wifi",
+      "wall_time": "2026-11-03T18:53:35.288558Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 506.8,
+      "event": "step_finished",
+      "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+      "request_id": null,
+      "detail": "passed: ack (HTTP 200), 50 ms",
+      "wall_time": "2026-11-03T18:53:35.293402Z"
+    },
+    {
+      "source": "app",
+      "clock": "phone monotonic (ms since run_started)",
+      "t_ms": 509.4,
+      "event": "run_finished",
+      "step_id": null,
+      "request_id": null,
+      "detail": "passed: message: ack (HTTP 200), 50 ms",
+      "wall_time": "2026-11-03T18:53:35.295870Z"
+    },
+    {
+      "source": "server",
+      "clock": "Mac monotonic (ms since first record of this run)",
+      "t_ms": 0.0,
+      "event": "record_stored",
+      "step_id": "c1816727-aa89-4843-9afd-34309a0ea741",
+      "request_id": "03010d19-daba-4be1-94b3-031fe8845de8",
+      "detail": "seq=1 transport=wifi",
+      "wall_time": "2026-11-03T18:53:35.290Z"
+    }
+  ],
+  "status_definitions": {
+    "pending": "The run has started on the phone but no step has started yet in the imported evidence.",
+    "running": "Steps have started but no run_finished event is in the imported evidence. Import again after the run ends; a stale import can also look like this.",
+    "passed": "Every required step completed and all required evidence is present and consistent: the app received an acknowledgement carrying the same request ID AND the collector holds exactly one stored record for that ID with matching run and step IDs, under the test's preconditions (e.g. observed transport exactly 'wifi').",
+    "failed": "The test ran with its preconditions satisfied and the evidence contradicts the expected behaviour, e.g. a request was not acknowledged, an ack carried a different ID, or the collector stored duplicates. For these connectivity/reliability checks a failure is a connectivity or reliability observation, never a security finding.",
+    "inconclusive": "The evidence cannot support passed or failed: preconditions were not met (transport not exactly 'wifi', traffic arrived via loopback), the user did not act in time, the run was cancelled, or the server evidence needed for confirmation is not available. A missing server record alone is never treated as proof of blocking.",
+    "execution_error": "The harness itself could not execute the test correctly: invalid configuration (endpoint/mode mismatch, cleartext not permitted for the host), evidence could not be written, the app process ended mid-run, or app evidence is internally inconsistent (duplicate request IDs)."
+  },
+  "status_definitions_by_kind": {
+    "connectivity": {
+      "pending": "The run has started on the phone but no step has started yet in the imported evidence.",
+      "running": "Steps have started but no run_finished event is in the imported evidence. Import again after the run ends; a stale import can also look like this.",
+      "passed": "Every required step completed and all required evidence is present and consistent: the app received an acknowledgement carrying the same request ID AND the collector holds exactly one stored record for that ID with matching run and step IDs, under the test's preconditions (e.g. observed transport exactly 'wifi').",
+      "failed": "The test ran with its preconditions satisfied and the evidence contradicts the expected behaviour, e.g. a request was not acknowledged, an ack carried a different ID, or the collector stored duplicates. For these connectivity/reliability checks a failure is a connectivity or reliability observation, never a security finding.",
+      "inconclusive": "The evidence cannot support passed or failed: preconditions were not met (transport not exactly 'wifi', traffic arrived via loopback), the user did not act in time, the run was cancelled, or the server evidence needed for confirmation is not available. A missing server record alone is never treated as proof of blocking.",
+      "execution_error": "The harness itself could not execute the test correctly: invalid configuration (endpoint/mode mismatch, cleartext not permitted for the host), evidence could not be written, the app process ended mid-run, or app evidence is internally inconsistent (duplicate request IDs)."
+    },
+    "reliability": {
+      "pending": "The run has started on the phone but no step has started yet in the imported evidence.",
+      "running": "Steps have started but no run_finished event is in the imported evidence. Import again after the run ends; a stale import can also look like this.",
+      "passed": "Every required step completed and all required evidence is present and consistent: the app received an acknowledgement carrying the same request ID AND the collector holds exactly one stored record for that ID with matching run and step IDs, under the test's preconditions (e.g. observed transport exactly 'wifi').",
+      "failed": "The test ran with its preconditions satisfied and the evidence contradicts the expected behaviour, e.g. a request was not acknowledged, an ack carried a different ID, or the collector stored duplicates. For these connectivity/reliability checks a failure is a connectivity or reliability observation, never a security finding.",
+      "inconclusive": "The evidence cannot support passed or failed: preconditions were not met (transport not exactly 'wifi', traffic arrived via loopback), the user did not act in time, the run was cancelled, or the server evidence needed for confirmation is not available. A missing server record alone is never treated as proof of blocking.",
+      "execution_error": "The harness itself could not execute the test correctly: invalid configuration (endpoint/mode mismatch, cleartext not permitted for the host), evidence could not be written, the app process ended mid-run, or app evidence is internally inconsistent (duplicate request IDs)."
+    },
+    "observation": {
+      "pending": "The run has started on the phone but no step has started yet in the imported evidence.",
+      "running": "Steps have started but no run_finished event is in the imported evidence. Import again after the run ends; a stale import can also look like this.",
+      "passed": "Collection completed as configured and met the documented data-quality requirements: the session ran its full duration, every telemetry record is labelled ANDROID_WIFI_TELEMETRY with an explicit per-field status, at least one RSSI value is valid, and at least 50 % of the expected sampling slots produced a record (sample completeness; a retrospective rule added in analysis v7, not preregistered or validated; freshness is reported separately and does not count towards it). Failed probes, signal drops and outages during the session are valid OBSERVATIONS and do not lower this status.",
+      "failed": "Not used for observation sessions: an observation has no expected network behaviour to contradict. Problems seen during collection are reported as observations and anomaly alerts instead.",
+      "inconclusive": "Collection did not complete as configured (stopped early or cancelled by the user), produced no valid RSSI value, or covered fewer than 50 % of the expected sampling slots.",
+      "execution_error": "The harness could not collect correctly: no telemetry source, a record with an unexpected source label, inconsistent evidence, or a step that never finished without a recorded Cancel tap."
+    }
+  },
+  "cancellation_validation_definitions": {
+    "passed": "A Cancel tap was recorded (cancel_requested), the runner recorded stopping (run_cancelled) within 11 s (one bounded request plus 1 s), and no request started after the tap. Requests already in flight at the tap may still finish.",
+    "failed": "A request started after the tap, the runner kept working without recording run_cancelled, or stopping took longer than the bound.",
+    "not_exercised": "No Cancel tap was recorded during the run (or it arrived after the runner's final check and started nothing new). Says nothing about the mechanism."
+  },
+  "limitations": [
+    "Connectivity and reliability observations only; no security property is tested or claimed.",
+    "Observed transport is Android's report for the default network; it is not independently verified.",
+    "USB-mode traffic travels over adb reverse (USB) and says nothing about Wi-Fi.",
+    "Phone and Mac clocks are not synchronised; durations use each device's own monotonic clock and are never computed across devices.",
+    "Wait-step outcomes (restart observed, Wi-Fi loss/return observed) are app-side observations.",
+    "Single observations of elapsed time are not benchmarks.",
+    "ANDROID_WIFI_TELEMETRY (RSSI, frequency, link speed) is platform-reported, coarse and possibly cached; it is not CSI. Repeated values are not counted as fresh samples."
+  ]
+}
