@@ -1,0 +1,4 @@
+# Copy to local.properties (git-ignored). Used ONLY to generate the DEBUG build's
+# cleartext allow-list; release builds ignore it.
+# The collector computer's LAN IPv4 address (check with: ipconfig getifaddr en0  /  ip addr):
+ang.collectorHost=192.0.2.10

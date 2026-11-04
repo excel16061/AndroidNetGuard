@@ -1,0 +1,63 @@
+# --- Android SDK / local machine config ---
+local.properties
+/sdk/
+android-sdk/
+.android/
+*.keystore
+*.jks
+
+# --- Build output ---
+build/
+/app/build/
+.gradle/
+.kotlin/
+.cxx/
+.externalNativeBuild/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+
+# --- IDE ---
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# --- Secrets ---
+.env
+.env.*
+secrets.properties
+keystore.properties
+signing.properties
+google-services.json
+*.pem
+*.p12
+*.key
+
+# --- Device logs / captures (never commit device data) ---
+logs/
+device-logs/
+*.log
+logcat*.txt
+bugreport*.zip
+bugreport*.txt
+*.pcap
+*.pcapng
+*.hprof
+
+# --- Collector received messages (local test data) ---
+collector/data/
+__pycache__/
+*.jsonl
+
+# --- Prototype evidence (raw private originals + derived exports) ---
+evidence/
+
+# --- Release packages (built by tools/make_release.py; contain a private mapping) ---
+/release/
+
+# --- Machine-specific environment (JDK/SDK paths); portable template is env.example.sh in releases ---
+/env.sh

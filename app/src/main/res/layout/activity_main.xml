@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/tab_connection" style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="@string/tab_connection" />
+        <Button android:id="@+id/tab_tests" style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="@string/tab_tests" />
+        <Button android:id="@+id/tab_history" style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="@string/tab_history" />
+    </LinearLayout>
+
+    <!-- ============ CONNECTION ============ -->
+    <ScrollView android:id="@+id/screen_connection"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:id="@+id/device_info" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textSize="16sp" />
+            <TextView android:id="@+id/observed_transport" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:textSize="16sp" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:text="@string/transport_note" android:textSize="12sp" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:labelFor="@+id/usb_endpoint"
+                android:text="@string/label_usb_endpoint" />
+            <EditText android:id="@+id/usb_endpoint" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:importantForAutofill="no"
+                android:inputType="textUri" android:maxLines="1" />
+            <Button android:id="@+id/check_usb" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/check_usb" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:labelFor="@+id/wifi_endpoint"
+                android:text="@string/label_wifi_endpoint" />
+            <EditText android:id="@+id/wifi_endpoint" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="@string/hint_wifi_endpoint"
+                android:importantForAutofill="no" android:inputType="textUri" android:maxLines="1" />
+            <Button android:id="@+id/check_wifi" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/check_wifi" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="@string/label_connection_status"
+                android:textStyle="bold" />
+            <TextView android:id="@+id/connection_status" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:fontFamily="monospace"
+                android:textIsSelectable="true" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ============ TESTS ============ -->
+    <ScrollView android:id="@+id/screen_tests" android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/tests_header" android:textSize="12sp" />
+            <RadioGroup android:id="@+id/test_choice" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+            <TextView android:id="@+id/test_explanation" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:textIsSelectable="true" />
+            <LinearLayout android:id="@+id/sequence_params" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <EditText android:id="@+id/seq_count" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:hint="@string/hint_count" android:importantForAutofill="no"
+                    android:inputType="number" android:text="10" />
+                <EditText android:id="@+id/seq_interval" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:hint="@string/hint_interval" android:importantForAutofill="no"
+                    android:inputType="number" android:text="1000" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/observation_params" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:layout_marginTop="8dp" android:visibility="gone">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/observation_note" android:textSize="12sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText android:id="@+id/obs_duration" android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:hint="@string/hint_duration" android:importantForAutofill="no"
+                        android:inputType="number" android:text="120" />
+                    <EditText android:id="@+id/obs_sample" android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:hint="@string/hint_sample" android:importantForAutofill="no"
+                        android:inputType="number" android:text="2000" />
+                    <EditText android:id="@+id/obs_probe" android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:hint="@string/hint_probe" android:importantForAutofill="no"
+                        android:inputType="number" android:text="5000" />
+                </LinearLayout>
+                <EditText android:id="@+id/obs_label" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="@string/hint_label"
+                    android:importantForAutofill="no" android:inputType="text" android:maxLines="1"
+                    android:text="unlabelled" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="8dp">
+                <Button android:id="@+id/start_test" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="@string/start_test" />
+                <Button android:id="@+id/cancel_test" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="@string/cancel_test" />
+            </LinearLayout>
+            <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:max="100" />
+            <TextView android:id="@+id/prompt" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:background="#FFF3C4" android:padding="12dp" android:textSize="18sp"
+                android:textStyle="bold" android:visibility="gone" />
+            <TextView android:id="@+id/progress_text" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:fontFamily="monospace" android:textIsSelectable="true" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ============ HISTORY ============ -->
+    <ScrollView android:id="@+id/screen_history" android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <Button android:id="@+id/refresh_history" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/refresh_history" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/history_note" android:textSize="12sp" />
+            <TextView android:id="@+id/history_text" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:fontFamily="monospace" android:textIsSelectable="true" android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

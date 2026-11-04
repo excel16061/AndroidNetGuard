@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug-only overlay: permits cleartext HTTP to the loopback address used by
+     the `adb reverse` USB connectivity smoke test. Release builds do not get
+     this config and keep Android's default (cleartext blocked). -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:networkSecurityConfig="@xml/network_security_config_debug" />
+</manifest>
